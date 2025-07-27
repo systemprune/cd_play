@@ -7,6 +7,5 @@ public class MixedSum {
         return mixed.stream()
                 .mapToInt(i -> Integer.parseInt(i.toString()))
                 .sum();
-        //CLOCLOCKCLOC
     }
 }
