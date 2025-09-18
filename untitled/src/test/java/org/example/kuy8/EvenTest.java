@@ -1,19 +1,20 @@
 package org.example.kuy8;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static org.example.kuy8.Even.isEven;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class EvenTest {
 
     @Test
     public void test() {
-        assertTrue(isEven(0));
-        assertFalse(isEven(0.5));
-        assertFalse(isEven(1));
-        assertTrue(isEven(2));
-        assertTrue(isEven(-4));
+        Even num = new Even();
+        assertEquals(true, num.isEven(0));
+        assertEquals(false, num.isEven(0.5));
+        assertEquals(false, num.isEven(1));
+        assertEquals(true, num.isEven(2));
+        assertEquals(true, num.isEven(-4));
     }
 }
